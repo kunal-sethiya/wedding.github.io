@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunal & Hansika - Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: #333;
+            background: linear-gradient(135deg, #fff5f7 0%, #ffffff 50%, #fff0f5 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(to bottom, rgba(255, 192, 203, 0.1), transparent);
+        }
+
+        .ornament {
+            font-size: 2em;
+            color: #ff9ec4;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            color: #d63384;
+            margin: 20px 0;
+            font-weight: 700;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .names-separator {
+            font-size: 2em;
+            color: #ff9ec4;
+            margin: 0 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: #666;
+            margin-top: 10px;
+            font-style: italic;
+            animation: fadeIn 2s ease-in;
+        }
+
+        /* Main Content */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 50px 40px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(214, 51, 132, 0.1);
+            border: 2px solid #ffe4ec;
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #d63384;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, transparent, #ff9ec4, transparent);
+        }
+
+        /* Wedding Details */
+        .wedding-details {
+            text-align: center;
+            line-height: 2;
+        }
+
+        .detail-item {
+            margin: 25px 0;
+        }
+
+        .detail-label {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3em;
+            color: #d63384;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .detail-value {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .date-highlight {
+            font-size: 2em;
+            color: #d63384;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            margin: 20px 0;
+            display: block;
+        }
+
+        /* Welcome Message */
+        .welcome-message {
+            text-align: center;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
+            padding: 40px 20px;
+            font-style: italic;
+            background: linear-gradient(to right, transparent, #fff5f7, transparent);
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .welcome-message p {
+            margin: 15px 0;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 40px 20px;
+            background: #fff5f7;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+
+        .contact-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #d63384;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: #ff9ec4;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .heart {
+            color: #ff9ec4;
+            font-size: 1.2em;
+            animation: pulse 1.5s infinite;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* Decorative Elements */
+        .flower-decoration {
+            text-align: center;
+            font-size: 2em;
+            color: #ff9ec4;
+            margin: 30px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+
+            .names-separator {
+                display: block;
+                margin: 10px 0;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .date-highlight {
+                font-size: 1.5em;
+            }
+
+            .welcome-message {
+                font-size: 1.1em;
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 1.6em;
+            }
+
+            .date-highlight {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="ornament">✦ ❖ ✦</div>
+            <h1>
+                Kunal <span class="names-separator">&</span> Hansika
+            </h1>
+            <p class="subtitle">Together with their families, invite you to celebrate their wedding</p>
+        </header>
+
+        <!-- Wedding Details Section -->
+        <div class="content-section">
+            <h2 class="section-title">Wedding Celebration</h2>
+
+            <div class="wedding-details">
+                <div class="detail-item">
+                    <span class="date-highlight">30th November 2025</span>
+                </div>
+
+                <div class="flower-decoration">❀ ✿ ❀</div>
+
+                <div class="detail-item">
+                    <span class="detail-label">Venue</span>
+                    <span class="detail-value">
+                        Regenta Resorts Vanya Mahal<br>
+                        Ranthambore, Sawai Madhopur
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Welcome Message -->
+        <div class="welcome-message">
+            <p>We are thrilled to share this special day with you!</p>
+            <p>Your presence would mean the world to us as we begin this beautiful journey together.</p>
+            <p>We are excited to have you become part of this joyous celebration and hope to see you there.</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3 class="contact-title">Get in Touch</h3>
+            <div class="contact-info">
+                <p>For any queries, please contact:</p>
+                <p><strong>Kunal Sethiya</strong></p>
+                <p><a href="tel:+919023281651">+91 90232 81651</a></p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="flower-decoration">✦ ❖ ✦</div>
+            <p>With love and anticipation <span class="heart">♥</span></p>
+            <p>Kunal & Hansika</p>
+        </footer>
+    </div>
+</body>
+</html>
